@@ -1,0 +1,4 @@
+# ここに設定したconfigを読み込んで機能する
+
+#trueであったら
+Server_maintenace: true

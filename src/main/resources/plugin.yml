@@ -1,0 +1,17 @@
+name: Maintenace
+version: '${version}'
+main: com.github.majisyou.maintenace.Maintenace
+api-version: 1.18
+authors: [ majisyou ]
+description: Maintenace
+
+commands:
+  maintenance_mode:
+    description: メンテナンスモードを変更するコマンド
+    permission: prince_server_maintenance
+    usage: コマンドが失敗
+
+permissions:
+  prince_server_maintenance:
+    description: メンテナンス中に入れるパーミッション
+    default: op
