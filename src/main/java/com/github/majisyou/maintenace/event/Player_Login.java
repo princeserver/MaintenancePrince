@@ -17,12 +17,12 @@ public class Player_Login implements Listener {
     @EventHandler
     public void Login_cancel (PlayerJoinEvent event){
 
-        if(ConfigManager.getMaintenance_mode().equals("true")){
-            if(!(event.getPlayer().isPermissionSet("prince_server_maintenance"))){
-                event.getPlayer().kick(Component.text(ChatColor.RED+"メンテナンス中です"));
+        if(ConfigManager.getMaintenance_mode().equals("true")){ //configの中のmaintenane_modeがtrueだからっていうやつ
+            if(!(event.getPlayer().isPermissionSet("prince_server_maintenance"))){ //パーミッションprince_server_maintenanceがなったら
+                event.getPlayer().kick(Component.text(ChatColor.RED+"メンテナンス中です")); //キックするコマンド
 //            System.getLogger(event.getPlayer().getName()+"がログインしようとしたよ");
             }else {
-//                event.getPlayer().sendMessage("メンテナンス中だよ");
+                event.getPlayer().sendMessage("メンテナンス中だよ");
             }
         }
     }

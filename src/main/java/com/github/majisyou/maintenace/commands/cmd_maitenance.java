@@ -21,11 +21,12 @@ public class cmd_maitenance implements CommandExecutor {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        if(sender.hasPermission("maintenance_admin")){
+        if(sender.hasPermission("maintenance_admin")){            //permissionが持っているなら
 
-            //permissionの設定
+
             if (args.length == 0){
                 sender.sendMessage("Maintenance_mode is "+ConfigManager.getMaintenance_mode());
+                //メンテナンスモードが今どのような状態かを見ることができる
                 return true;
             }
 
@@ -35,15 +36,17 @@ public class cmd_maitenance implements CommandExecutor {
             }
 
             if(args[0].equals("true")){
+                //コマンドでtrueを打った時に
                 //configの中のServer_maintenanceをtrue
                 //この中にパーミッションを持っていない人はkickするコマンドを使用する。
-                this.Login_player_kick();
+                this.Login_player_kick(); //この下のメソッドでkick
                 ConfigManager.setMaintenance_mode(args[0]);
                 sender.sendMessage("MaintenanceModeをONにしました");
                 return true;
             }
 
             if(args[0].equals("false")){
+                //コマンドでfalseと打った場合
                 //configの中のServer_maintenanceをfalseにする
                 ConfigManager.setMaintenance_mode(args[0]);
                 sender.sendMessage("MaintenanceModeをOFFにしました");

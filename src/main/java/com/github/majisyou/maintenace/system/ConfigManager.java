@@ -19,6 +19,7 @@ public class ConfigManager {
     public static void setMaintenance_mode(String true_or_false){
         if(true_or_false.equals("true")||true_or_false.equals("false")){
             config.set("Server_maintenace",true_or_false);
+            //configの中の設定がtrueかどうかを返すようにできてる
         }
     }
 }

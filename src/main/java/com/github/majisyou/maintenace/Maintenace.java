@@ -39,7 +39,7 @@ public final class Maintenace extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        this.saveConfig();
+        this.saveConfig();//これは現在の設定を保存する
         getLogger().info("Maintenaceプラグインを終了しました");
         // Plugin shutdown logic
     }
