@@ -23,7 +23,6 @@ public class cmd_maitenance implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if(sender.hasPermission("maintenance_admin")){            //permissionが持っているなら
 
-
             if (args.length == 0){
                 sender.sendMessage("Maintenance_mode is "+ConfigManager.getMaintenance_mode());
                 //メンテナンスモードが今どのような状態かを見ることができる
