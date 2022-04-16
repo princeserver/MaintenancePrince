@@ -20,7 +20,7 @@ public class Player_Login implements Listener {
         if(ConfigManager.getMaintenance_mode().equals("true")){ //configの中のmaintenane_modeがtrueだからっていうやつ
             if(!(event.getPlayer().isPermissionSet("prince_server_maintenance"))){ //パーミッションprince_server_maintenanceがなったら
                 event.getPlayer().kick(Component.text(ChatColor.RED+"メンテナンス中です")); //キックするコマンド
-//            System.getLogger(event.getPlayer().getName()+"がログインしようとしたよ");
+//                System.getLogger(event.getPlayer().getName()+"がログインしようとしたよ");
             }else {
                 event.getPlayer().sendMessage("メンテナンス中だよ");
             }
