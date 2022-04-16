@@ -2,6 +2,7 @@ package com.github.majisyou.maintenace.system;
 
 import com.github.majisyou.maintenace.Maintenace;
 import org.bukkit.configuration.Configuration;
+import org.bukkit.configuration.file.FileConfiguration;
 
 public class ConfigManager {
     private static Maintenace plugin = Maintenace.getInstance();
