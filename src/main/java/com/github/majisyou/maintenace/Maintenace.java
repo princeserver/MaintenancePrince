@@ -3,7 +3,6 @@ package com.github.majisyou.maintenace;
 import com.github.majisyou.maintenace.commands.cmd_maitenance;
 import com.github.majisyou.maintenace.event.Player_Login;
 import com.github.majisyou.maintenace.system.ConfigManager;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Maintenace extends JavaPlugin {
