@@ -27,14 +27,9 @@ public final class Maintenace extends JavaPlugin {
         this.getCommand("maintenance_mode").setExecutor(new cmd_maitenance());
         // Plugin startup logic
 
+        //config設定
         this.saveDefaultConfig();
         ConfigManager.loadConfig();
-
-        // config.ymlが存在しない場合はファイルに出力します。
-        saveDefaultConfig();
-        // config.ymlを読み込みます。
-        FileConfiguration config = getConfig();
-        // この2つは殆ど定型文の様な物なので覚えておきましょう。
     }
 
     @Override
