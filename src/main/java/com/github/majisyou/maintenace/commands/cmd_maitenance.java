@@ -37,6 +37,7 @@ public class cmd_maitenance implements CommandExecutor {
             //この中にパーミッションを持っていない人はkickするコマンドを使用する。
             this.Login_player_kick(); //この下のメソッドでkick
             ConfigManager.setMaintenance_mode(args[0]);
+            ConfigManager.loadConfig();
             sender.sendMessage("MaintenanceModeをONにしました");
             return true;
         }
@@ -44,6 +45,7 @@ public class cmd_maitenance implements CommandExecutor {
              //コマンドでfalseと打った場合
              //configの中のServer_maintenanceをfalseにする
              ConfigManager.setMaintenance_mode(args[0]);
+             ConfigManager.loadConfig();
              sender.sendMessage("MaintenanceModeをOFFにしました");
              return true;
         }
